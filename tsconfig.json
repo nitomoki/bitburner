@@ -1,18 +1,25 @@
 {
-    "compilerOptions": {
-        "target": "ESNext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
-        "module": "ESNext" /* Specify what module code is generated. */,
-        "moduleResolution": "node",
-        "moduleSuffixes": ["js", ""],
-        "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
-        "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
-
-        "strict": true /* Enable all strict type-checking options. */,
-        "skipLibCheck": true /* Skip type checking all .d.ts files. */,
-        "outDir": "dist",
-        "rootDir": "src",
-        "typeRoots": ["src/types"]
-    },
-    "include": ["src/**/*.ts"],
-    "exclude": ["node_modules", "dist"]
+  "include": ["NetscriptDefinitions.d.ts", "src/**/*"],
+  "exclude": ["src/lib/react.ts"],
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "esModuleInterop": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "strict": true,
+    "rootDir": "src/",
+    "outDir": "dist/",
+    "baseUrl": "src/",
+    "allowJs": true,
+    "jsx": "react",
+    "paths": {
+      "/*": ["*"],
+      "@ns": ["../NetscriptDefinitions.d.ts"],
+      "@react": ["lib/react.ts"]
+    }
+  }
 }

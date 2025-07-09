@@ -1,25 +1,26 @@
 {
-    "name": "home",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "@eslint/js": "^9.20.0",
-        "@typescript-eslint/eslint-plugin": "^8.23.0",
-        "@typescript-eslint/parser": "^8.23.0",
-        "eslint": "^9.20.0",
-        "eslint-config-prettier": "^10.0.1",
-        "eslint-plugin-prettier": "^5.2.3",
-        "globals": "^15.14.0",
-        "prettier": "^3.4.2",
-        "rimraf": "^6.0.1",
-        "typescript": "^5.7.3",
-        "typescript-eslint": "^8.23.0"
-    }
+  "name": "bitburner-typescript-template",
+  "version": "2.0.0",
+  "scripts": {
+    "watch:transpile": "tsc -w --preserveWatchOutput",
+    "watch:local": "node build/watch.js",
+    "watch:remote": "bitburner-filesync",
+    "watch:init": "node build/init.js",
+    "watch:all": "concurrently npm:watch:transpile npm:watch:local npm:watch:remote",
+    "watch": "npm run watch:init && npm run watch:all"
+  },
+  "author": "hydroflame, Hoekstraa, based on work by SlyCedix",
+  "devDependencies": {
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "bitburner-filesync": "^1.1.5",
+    "chokidar": "^3.5.3",
+    "concurrently": "^7.4.0",
+    "eslint": "^8.22.0",
+    "fast-glob": "^3.2.12",
+    "sync-directory": "^5.1.7",
+    "typescript": "^4.7.4"
+  }
 }
