@@ -100,3 +100,24 @@ export default async function main(ns: NS){
   ns.printRaw(<MyContent name="Your name"></MyContent>);
 }
 ```
+
+## Included example scripts
+
+The `src` directory contains a collection of automation scripts ready to use once compiled. After running `npm run watch`, the resulting `.js` files can be executed in Bitburner:
+
+- **`batch.ts`** – Coordinates hacking batches across all available servers, automatically gaining admin rights and scheduling hack/grow/weaken cycles.
+- **`augmentations.ts`** – Purchases augmentations in a preferred order, donates to factions when required and installs them when all targets are bought.
+- **`backdoor.ts`** – Connects through the network to a target server and installs a backdoor if one is missing.
+- **`buy_programs.ts`** – Buys TOR and Darkweb programs as soon as you have enough money.
+- **`buy_servers.ts`** and **`upgrade_servers.ts`** – Acquire new personal servers and upgrade their RAM when you can afford it.
+- **`upgrade_home_pc.ts`** – Upgrades the RAM and cores of your home computer.
+- **`join_factions.ts`** – Travels to cities and backdoors special servers to join factions automatically.
+- **`w0r1d_d43m0n.ts`** – Installs the Red Pill backdoor on `w0r1d_d43m0n` once all prerequisites are met.
+- Scripts in the `corp/` folder help manage corporations, while `utils.ts` provides helper functions used by many scripts.
+
+Run any compiled script from the in-game terminal, for example:
+
+```bash
+run batch.js
+```
+
